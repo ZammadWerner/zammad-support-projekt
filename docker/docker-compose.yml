@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api-runner:
+    image: ubuntu:22.04
+    container_name: api_automatisierung
+    # Hält den Container im Hintergrund am Laufen
+    command: tail -f /dev/null
+    # Bindet deine Token/Passwörter sicher ein, ohne sie im Code zu zeigen
+    env_file:
+      - ./scripts/.env
+    # Spiegelt deinen lokalen Skript-Ordner in den Container
+    volumes:
+      - ./scripts:/workspace/scripts
+    working_dir: /workspace/scripts
