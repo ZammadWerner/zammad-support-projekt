@@ -41,3 +41,12 @@
     ​Warum kann ein Suchdienst notwendig sein?
 
     ​Antwort: Ein IT-Supportsystem sammelt im Laufe der Zeit tausende von Tickets und Knowledge Base Artikeln an. Eine normale Datenbankabfrage wäre bei solchen Datenmengen viel zu langsam. Ein dedizierter Suchdienst (wie Elasticsearch) baut einen Suchindex auf und ermöglicht dadurch eine rasend schnelle Volltextsuche in Echtzeit.
+4.  Fehlerdokumentation Start Docker-compose up- d
+
+Fehlerdokumentation für Aufgabe 3 (README)
+
+    ​Problembeschreibung: Beim ersten Startversuch des Docker-Compose-Stacks brach der Prozess ab mit der Fehlermeldung, dass die im env_file-Pfad angegebene Datei scripts/.env nicht gefunden werden konnte.
+    ​Ursache: Die verwendete Docker-Compose-Vorlage enthielt standardmäßig den Testdienst api-runner mit einer aktivierten Einbindung einer Umgebungsvariablen-Datei für die spätere API-Integration (Woche 4), welche zu diesem frühen Einrichtungszeitpunkt im lokalen Dateisystem noch nicht existierte. 
+
+    ​Lösung / Workaround: Der betroffene env_file-Block innerhalb der docker-compose.yml wurde vorübergehend auskommentiert, um den reinen Basisstart des Systems für die ersten Aufgaben ohne fehlende .env-Abhängigkeiten erfolgreich durchzuführen. 
+
