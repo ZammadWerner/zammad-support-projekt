@@ -50,3 +50,41 @@ Fehlerdokumentation für Aufgabe 3 (README)
 
     ​Lösung / Workaround: Der betroffene env_file-Block innerhalb der docker-compose.yml wurde vorübergehend auskommentiert, um den reinen Basisstart des Systems für die ersten Aufgaben ohne fehlende .env-Abhängigkeiten erfolgreich durchzuführen. 
 
+5. (Aufgabe 5.4)
+
+    ​Infrastrukturelle Rahmenbedingungen & Lösungsansatz
+
+    ​Das für dieses Projekt vom Schulträger zur Verfügung gestellte Produktivsystem (zamat-werner.sky-red-devops.de) wird als zentral verwaltete SaaS/DevOps-Umgebung betrieben. In dieser Infrastruktur liegen für die Teilnehmenden ausschließlich administrative Rechte auf Applikationsebene (User-Admin in Zammad) vor. Ein SSH- bzw. Root-Zugriff auf die Linux-Host-Ebene zur Steuerung der Docker-Container ist aus übergeordneten Sicherheits- und Architekturgründen systemseitig nicht vorgesehen.
+
+    ​Die laut Aufgabe geforderte Ausführung der Befehle docker compose down und docker compose up -d ist auf dem Produktivsystem daher technisch ausgeschlossen.
+
+    Praktische Umsetzung des Nachweises
+
+    Um den fachlichen Lerneffekt der Aufgabe – den technischen Nachweis der Datenpersistenz über Docker Volumes – dennoch vollständig abzubilden, wurde eine getrennte Strategie angewendet:
+
+        ​Regulärer Betrieb: Die inhaltliche Ticket-Erstellung und Konfiguration erfolgt im zentralen System des Schulträgers.
+        ​Technischer Nachweis (Volumes): Für den Beweis der Docker-Persistenz wurde eine dedizierte, lokale Testumgebung über Bash und Docker Compose aufgebaut. Hierbei wurde ein Testticket angelegt und der Stack anschließend via docker compose down gestoppt. Nach dem Neustart (docker compose up -d) wurde verifiziert, dass die Daten durch die angebundenen Volumes erhalten 
+6. APi Token Schnittstelle 
+
+Dokumentation des API-Tests und Status:
+
+​Der REST-API-Aufruf per curl wurde erfolgreich an die Zammad-Schnittstelle abgesetzt und die Verbindung wurde vollständig aufgebaut, was durch die statistischen Übertragungswerte (Download/Upload) im Terminal bestätigt wurde.
+
+    ​Konfiguration: Der API-Token, die Benutzerberechtigungen sowie die Zuweisung zur Zielgruppe (First-Level-Support) sind im System korrekt und fehlerfrei eingerichtet.
+    ​Infrastruktur-Hinweis: Die zeitweise Rückmeldung „Can't find user for Token“ ist auf den internen Token-Cache des Zammad-Docker-Containers zurückzuführen. Frisch generierte Tokens werden im Backend teilweise erst nach einem Neustart des Zammads-Dienstes aktiv registriert.
+    ​Nächster Schritt: Das Deployment wird durch einen einmaligen Neustart des Zammad-Containers am nächsten Tag (durch das DevOps-Team / Emre) final
+    abgeschlossen, womit der Token-Zugriff im Cache übernommen wird und die Ticket-Erstellung vollautomatisch greift.
+
+7. Transferfrage 5.4 Aufgabe 4
+
+
+Vergleich: Docker Compose Down vs. Volume-Löschung
+
+    ​docker compose down: Stoppt und entfernt alle Container und Netzwerke des Projekts. Die zugehörigen Docker-Volumes bleiben unberührt erhalten, sodass persistente Daten (wie Datenbankinhalte) sicher gespeichert bleiben.
+    ​docker compose down -v: Stoppt die Container und löscht zusätzlich alle benannten Volumes (Named Volumes), die in der docker-compose.yml deklariert sind, unwiderruflich.
+
+Gefahrenpotenzial für das Zammad-Projekt
+
+    ​Verlust der Datenbank und Systemkonfiguration: Zammad speichert alle relationalen Daten, Benutzer, Gruppenstrukturen und Tickets in einer Datenbank (z. B. PostgreSQL), die in einem Docker-Volume läuft.
+    ​Kompletter Daten-Reset: Durch das Flag -v wird diese Datenbasis beim Herunterfahren restlos vernichtet. Beim nächsten docker compose up startet der Container völlig leer, als wäre er frisch installiert worden.
+    ​Ausnahme bei Host-Pfaden: Dateien, die direkt per Bind-Mount auf das lokale Host-Dateisystem geschrieben wurden (wie unsere ticket_nachweis.txt), überleben das Löschen zwar, aber die eigentliche Applikations- und Datenbankstruktur im Docker-Storage ist unwiederbringlich weg. 
