@@ -41,6 +41,15 @@
     ​Warum kann ein Suchdienst notwendig sein?
 
     ​Antwort: Ein IT-Supportsystem sammelt im Laufe der Zeit tausende von Tickets und Knowledge Base Artikeln an. Eine normale Datenbankabfrage wäre bei solchen Datenmengen viel zu langsam. Ein dedizierter Suchdienst (wie Elasticsearch) baut einen Suchindex auf und ermöglicht dadurch eine rasend schnelle Volltextsuche in Echtzeit.
+
+5.2 Aufgabe 2 Transferauftrag
+
+Transferauftrag: Begründung der Ticket-Gruppen
+
+    ​Netzwerk: Diese Gruppe wird zwingend benötigt, um alle infrastrukturbezogenen Incidents und Requests (wie Switch-Konfigurationen, WLAN-Ausfälle oder IP-Adressvergaben) strukturiert von anderen Support-Ebenen zu trennen.
+    ​Support Second Level Support: Dient als zentrale Anlaufstelle für eskalierte Support-Anfragen, die von der Erstanlaufstelle (First Level) nicht gelöst werden konnten und vertieftes technisches Fachwissen erfordern.
+    ​Systemadministration: Ist für administrative Kernprozesse, Server-Dienste (wie Docker-Container-Verwaltung, Zammad-Instanzen und Berechtigungsmanagement) reserviert, um administrative Eingriffe sauber abzusichern und zu dokumentieren.
+
 4.  Fehlerdokumentation Start Docker-compose up- d
 
 Fehlerdokumentation für Aufgabe 3 (README)
@@ -88,3 +97,17 @@ Gefahrenpotenzial für das Zammad-Projekt
     ​Verlust der Datenbank und Systemkonfiguration: Zammad speichert alle relationalen Daten, Benutzer, Gruppenstrukturen und Tickets in einer Datenbank (z. B. PostgreSQL), die in einem Docker-Volume läuft.
     ​Kompletter Daten-Reset: Durch das Flag -v wird diese Datenbasis beim Herunterfahren restlos vernichtet. Beim nächsten docker compose up startet der Container völlig leer, als wäre er frisch installiert worden.
     ​Ausnahme bei Host-Pfaden: Dateien, die direkt per Bind-Mount auf das lokale Host-Dateisystem geschrieben wurden (wie unsere ticket_nachweis.txt), überleben das Löschen zwar, aber die eigentliche Applikations- und Datenbankstruktur im Docker-Storage ist unwiederbringlich weg. 
+
+8. Projektdokumentation Abschluss Woche 1
+
+​1. Projektabschluss & Ticket-Erfolg
+
+    ​Erfolgreicher API-Call: Nach der Analyse von Authentifizierungs- und Berechtigungs-Hürden wurde das Ticket erfolgreich per Bash-Skript und cURL im Zammad-Backend platziert.
+    ​Verifizierte Authentifizierung: Der Übergang von fehlerhaften Token-Headern zu einer stabilen Basic-Authentifizierung (-u "E-Mail:Passwort") stellte sicher, dass der Admin-Kontext fehlerfrei vom Backend akzeptiert wird.
+    ​Ergebnis im System: Das Test-Ticket „Test-Ticket via Basic Auth“ wurde fehlerfrei in der Gruppe Users für den Kunden Werner Hause angelegt und im Web-Interface dokumentiert.
+
+2. Fehleranalyse & Dokumentation (Fehler-Log)
+
+    ​Hürde 1 (Falscher Header): Die Verwendung von Bearer führte zu direkten Token-Ablehnungen durch das Zammad-Backend, da Zammad zwingend das Format Authorization: Token token=<TOKEN> verlangt.
+    ​Hürde 2 (User-Auflösung): Fehlende oder nicht korrekt gemappte User-Kontexte bei neu generierten Personal Access Tokens erzeugten den Fehler Can't find User for Token.
+    ​Lösung: Umgehung des Token-Caching-Verhaltens im lokalen Test-Setup durch direkte Basic-Authentifizierung mit Admin-Zugangsdaten und gleichzeitiger Übergabe der numerischen group_id sowie der Customer-E-Mail.
