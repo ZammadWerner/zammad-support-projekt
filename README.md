@@ -111,3 +111,16 @@ Gefahrenpotenzial für das Zammad-Projekt
     ​Hürde 1 (Falscher Header): Die Verwendung von Bearer führte zu direkten Token-Ablehnungen durch das Zammad-Backend, da Zammad zwingend das Format Authorization: Token token=<TOKEN> verlangt.
     ​Hürde 2 (User-Auflösung): Fehlende oder nicht korrekt gemappte User-Kontexte bei neu generierten Personal Access Tokens erzeugten den Fehler Can't find User for Token.
     ​Lösung: Umgehung des Token-Caching-Verhaltens im lokalen Test-Setup durch direkte Basic-Authentifizierung mit Admin-Zugangsdaten und gleichzeitiger Übergabe der numerischen group_id sowie der Customer-E-Mail.
+
+9. Dokumentation: ITSM-Struktur & Rollenanpassung in Zammad (OfficeLine GmbH)
+
+    ​System-Setup & Basis-Konfiguration
+        ​Erfolgreiche Anlage aller notwendigen Gruppen für das ITSM-System der OfficeLine GmbH inklusive des zentralen Service Desks sowie der technischen Fachgruppen (Hardware-Support, Software-Support, Second Level, Systemadministration).
+        ​Vollständige Einarbeitung der initialen Benutzerstruktur im System, bestehend aus der IT-Leitung, First- und Second-Level-Agenten, dem Wissensdatenbank-Editor sowie den internen Fachabteilungen (Buchhaltung, Vertrieb, Personal, Lager, Kundenservice, Geschäftsführung).
+     ​Praxistest & Architektur-Evaluation
+        ​Durchführung eines initialen Live-Tests mit Testtickets, um die abteilungsübergreifenden Workflows und Rückfragenprozesse zu validieren.
+        ​Erkenntnis: Die standardmäßige Klassifizierung der internen Fachbereiche als reine "Kunden" führt im ITSM-Betrieb zu gravierenden prozessualen Einschränkungen. Da Kunden keinen Zugriff auf gemeinsame Gruppen-Pools haben, sind Tickets starr an den jeweiligen Einzelaccount gebunden. Bei Abwesenheit (Urlaub/Krankheit) oder bei der abteilungsübergreifenden Ticket-Rückgabe (z.B. an die Gruppe "Personal") bricht die Bearbeitungskette vollständig ein; eine transparente Historie und Vertreterregelung ist so nicht abbildbar.
+     ​Prozesskorrektur & Rollenwechsel
+        ​Konsequenter architektonischer Schwenk: Da es sich bei den Abteilungen (Personal, Vertrieb, Buchhaltung etc.) um interne Stakeholder und Mitarbeiter der OfficeLine GmbH und nicht um externe Kunden handelt, wurden die Accounts von der Kunden-Rolle auf die Agenten-Rolle umgestellt.
+        ​Dadurch wird sichergestellt, dass die jeweiligen Fachbereiche als Team in ihren Gruppen agieren, Tickets gemeinschaftlich überwachen, reibungslose Rückfragen bearbeiten und eine revisionssichere, lückenlose Ticket-Historie im Sinne eines professionellen ITSM-Standards gewährleistet ist. 
+
