@@ -124,3 +124,24 @@ Gefahrenpotenzial für das Zammad-Projekt
         ​Konsequenter architektonischer Schwenk: Da es sich bei den Abteilungen (Personal, Vertrieb, Buchhaltung etc.) um interne Stakeholder und Mitarbeiter der OfficeLine GmbH und nicht um externe Kunden handelt, wurden die Accounts von der Kunden-Rolle auf die Agenten-Rolle umgestellt.
         ​Dadurch wird sichergestellt, dass die jeweiligen Fachbereiche als Team in ihren Gruppen agieren, Tickets gemeinschaftlich überwachen, reibungslose Rückfragen bearbeiten und eine revisionssichere, lückenlose Ticket-Historie im Sinne eines professionellen ITSM-Standards gewährleistet ist. 
 
+10. 6.1 Aufgabe 5 
+
+Das Triade-Konzept (die strukturierte Aufteilung in Service Desk, First Level Support und Second Level Support) bildet das organisatorische und operative Fundament des IT-Service-Desk-Prozesses.
+
+​Aufbau der Struktur:
+
+    ​Service Desk: Übernimmt die zentrale Annahme interner Anfragen, führt eine Vollständigkeits- und Qualitätsprüfung der Tickets durch, klassifiziert diese und leitet sie an die zuständigen Fachgruppen weiter.
+
+    ​First Level Support: Ist zuständig für die Erstaufnahme technischer Anfragen, die Bearbeitung von Standardfällen mithilfe definierter Ticketvorlagen und die gezielte Weitergabe komplexerer Sachverhalte.
+
+    ​Second Level Support: Konzentriert sich auf die Bearbeitung komplexer technischer Probleme, erarbeitet Speziallösungen und steuert die Eskalationsbearbeitung.
+
+​Warum das Konzept wichtig ist:
+
+    ​Klare Zuständigkeiten: Es verhindert unklare Verantwortlichkeiten und definiert exakt, welcher Mitarbeiter oder welche Rolle berechtigt ist, Tickets zu bearbeiten oder weiterzuleiten.
+
+    ​Vermeidung von Fehlrouting & Doppelbearbeitung: Durch strukturierte Rollen- und Rechtezuweisungen sowie vorgeschaltete Prüfungen wird verhindert, dass Anfragen falsch zugeordnet werden oder doppelt bearbeitet werden müssen.
+
+    ​Gesteigerte Ticketqualität: Standardisierte Prozesse, Vorlagen und eine zentrale Wissenssammlung (Knowledge Base) sorgen für weniger Rückfragen und eine schnellere Lösungsfindung.
+
+    ​Entlastung: Die operativen Fachbereiche und Experten werden von unqualifizierten oder unvollständigen Anfragen entlastet.
