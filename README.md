@@ -145,3 +145,11 @@ Das Triade-Konzept (die strukturierte Aufteilung in Service Desk, First Level Su
     ​Gesteigerte Ticketqualität: Standardisierte Prozesse, Vorlagen und eine zentrale Wissenssammlung (Knowledge Base) sorgen für weniger Rückfragen und eine schnellere Lösungsfindung.
 
     ​Entlastung: Die operativen Fachbereiche und Experten werden von unqualifizierten oder unvollständigen Anfragen entlastet.
+
+11. Tätigkeit / Fortschritt:
+
+Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 strukturierte Support-Artikel nachvollziehbar, schlüssig und unter Einhaltung der strikten Service-Desk-Trennungslogik dokumentiert. Alle Artikel wurden erfolgreich in das System eingepflegt und inklusive der jeweiligen Beschreibungen als Anhang zum Download bereitgestellt. 
+
+
+## Update 08.09.2026 - Zammad Knowledge Base
+Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 strukturierte Support-Artikel nachvollziehbar, schlüssig und unter Einhaltung der strikten Service-Desk-Trennungslogik dokumentiert. Alle Artikel wurden erfolgreich in das System eingepflegt und inklusive der jeweiligen Beschreibungen als Anhang zum Download bereitgestellt.
