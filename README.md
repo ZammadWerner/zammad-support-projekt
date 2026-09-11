@@ -146,10 +146,14 @@ Das Triade-Konzept (die strukturierte Aufteilung in Service Desk, First Level Su
 
     ​Entlastung: Die operativen Fachbereiche und Experten werden von unqualifizierten oder unvollständigen Anfragen entlastet.
 
-11. Tätigkeit / Fortschritt:
-
-Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 strukturierte Support-Artikel nachvollziehbar, schlüssig und unter Einhaltung der strikten Service-Desk-Trennungslogik dokumentiert. Alle Artikel wurden erfolgreich in das System eingepflegt und inklusive der jeweiligen Beschreibungen als Anhang zum Download bereitgestellt. 
-
+11. 
 
 ## Update 08.09.2026 - Zammad Knowledge Base
 Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 strukturierte Support-Artikel nachvollziehbar, schlüssig und unter Einhaltung der strikten Service-Desk-Trennungslogik dokumentiert. Alle Artikel wurden erfolgreich in das System eingepflegt und inklusive der jeweiligen Beschreibungen als Anhang zum Download bereitgestellt.
+
+12. ​Update: 10.09.2026 – Ticket-Fundament & Automatisierung (Woche 2 & 3)
+
+    ​Erstellung einer universellen Ticketvorlage: Es wurde eine standardisierte, rein textbasierte Ticketvorlage entwickelt. Diese Vorlage verzichtet bewusst auf vordefinierte Gruppen, um Konflikte mit dem automatisierten Trigger-Routing zu vermeiden und eine saubere Triage im Service Desk zu gewährleisten.
+    ​Vorbereitung der 40 Pflicht-Tickets: Alle 40 geforderten Support-Tickets wurden in Word vollständig vorstrukturiert. Sie enthalten detaillierte Problembeschreibungen, saubere Status- und Prioritätsdefinitionen sowie fachlich begründete Eskalations- und Lösungswege inklusive Knowledge-Base-Verweisen.
+    ​Implementierung eines Automatik-Triggers: Es wurde der erste Automatik-Trigger auf Basis des Schlüsselworts „Passwort“ im System hinterlegt und erfolgreich getestet. Dieser sorgt für ein vollautomatisiertes, fehlerfreies Routing der eingehenden Anfrage an die korrekte Fachgruppe (Benutzerverwaltung) inklusive
+    (Benutzerverwaltung) inklusive automatischem Tagging und Prioritätsanpassung. Die restlichen 9 Trigger befinden sich in Vorbereitung.
