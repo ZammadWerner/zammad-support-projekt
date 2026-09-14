@@ -186,3 +186,12 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
 ​5. Rolle des Service-Desks
 
     ​Der zentral vorgeschaltete Service-Desk fungiert als erste Instanz, um unklare, manuelle oder interne Anfragen abzufangen und eine korrekte manuelle Zuweisung sicherzustellen, sofern keine automat greift.
+
+14. Titel: feat: Zammad Automatisierungen und neues Kategorie-Feld implementiert
+
+​Beschreibung:
+
+    ​Hinzufügen einer neuen Option im Feld "Kategorie" zur besseren Ticket-Klassifizierung.
+    ​Implementierung und Konfiguration der Zammad-Automatisierungen (Trigger/Scheduler) für spezifische Workflows (inkl. Onboarding).
+    ​Manuelle Funktionstests der Automatisierungsregeln erfolgreich abgeschlossen.
+    ​Hinweis: Abschließende Verifikation der zeitgesteuerten Ausführung erfolgt am nächsten Werktag im Live-Betrieb.
