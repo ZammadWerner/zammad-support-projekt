@@ -195,3 +195,10 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
     ​Implementierung und Konfiguration der Zammad-Automatisierungen (Trigger/Scheduler) für spezifische Workflows (inkl. Onboarding).
     ​Manuelle Funktionstests der Automatisierungsregeln erfolgreich abgeschlossen.
     ​Hinweis: Abschließende Verifikation der zeitgesteuerten Ausführung erfolgt am nächsten Werktag im Live-Betrieb.
+
+15. ## Status-Update: Automatisierungs-Tests
+
+- **Datum:** 15. September 2026
+- **Status:** Erfolgreich abgeschlossen[span_0](start_span)[span_0](end_span)
+- **Testergebnis:** Alle 6 Automatisierungsregeln (inkl. zeitbasierter 3-Tage-Eskalation mit Operator "vor (relativ)") wurden im Live-System verifiziert[span_1](start_span)[span_1](end_span). Screenshots zur Dokumentation in der Worddatei enthalten.
+
