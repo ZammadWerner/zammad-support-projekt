@@ -202,3 +202,8 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
 - **Status:** Erfolgreich abgeschlossen[span_0](start_span)[span_0](end_span)
 - **Testergebnis:** Alle 6 Automatisierungsregeln (inkl. zeitbasierter 3-Tage-Eskalation mit Operator "vor (relativ)") wurden im Live-System verifiziert[span_1](start_span)[span_1](end_span). Screenshots zur Dokumentation in der Worddatei enthalten.
 
+16. Zammad Textbaustein-Integration:
+
+    ​Implementierung und Test der drei Kern-Textbausteine (Eingang, Kundenanforderung/Rückfrage, Abschluss) im Zammad Service Desk.
+    ​Erfolgreicher Funktionstest der dynamischen Objekt- und Kundenvariablen (ticket.id, ticket.customer.lastname, ticket.title).
+    ​Sicherstellung der Prozessvorgaben für den internen Gatekeeper-Workflow.
