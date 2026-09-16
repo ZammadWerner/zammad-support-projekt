@@ -207,3 +207,14 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
     ​Implementierung und Test der drei Kern-Textbausteine (Eingang, Kundenanforderung/Rückfrage, Abschluss) im Zammad Service Desk.
     ​Erfolgreicher Funktionstest der dynamischen Objekt- und Kundenvariablen (ticket.id, ticket.customer.lastname, ticket.title).
     ​Sicherstellung der Prozessvorgaben für den internen Gatekeeper-Workflow.
+
+17. Dokumentations-Baustein: Sicherheits-Refactoring und Git-Historien-Bereinigung (v1.0 zu v1.1)
+
+    ​Ausgangssituation & Risiko-Identifikation: In der initialen Entwicklungsphase (Version 1.0) des Bash-Skripts zammad_ticket_sync.sh wurden die Authentifizierungsdaten (Benutzername und Passwort) zur Sicherung des Funktionstests direkt im Klartext im Code hinterlegt und in das Git-Repository übertragen. 
+
+     ​Durchgeführte Gegenmaßnahmen (Security Hardening):
+        ​Code-Refactoring (v1.1): Umstellung des Skripts auf eine lokale, über .gitignore geschützte .env-Architektur. Das Skript greift nun zur Laufzeit dynamisch über Umgebungsvariablen zu.
+        ​Passwort-Rotation: Direkt nach dem erfolgreichen Commit der Version 1.1 wurde im Zammad-System eine administrative Passwort-Rotation durchgeführt.
+    Ergebnis & Audit-Nachweis: Durch die Passwort-Rotation ist der in der Git-Historie (Version 1.0) verbliebene Klartext-Eintrag vollständig entwertet worden. Ein potenzieller Angreifer oder Bot, der Zugriff auf die historische Versionsgeschichte erhält, kann mit den alten Credentials keinerlei Systemzugriff mehr erlangen. Der Live-Betrieb erfolgt ausschließlich autorisiert und verschlüsselt über die neue .env-Schnittstelle. 
+
+
