@@ -217,4 +217,10 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
         ​Passwort-Rotation: Direkt nach dem erfolgreichen Commit der Version 1.1 wurde im Zammad-System eine administrative Passwort-Rotation durchgeführt.
     Ergebnis & Audit-Nachweis: Durch die Passwort-Rotation ist der in der Git-Historie (Version 1.0) verbliebene Klartext-Eintrag vollständig entwertet worden. Ein potenzieller Angreifer oder Bot, der Zugriff auf die historische Versionsgeschichte erhält, kann mit den alten Credentials keinerlei Systemzugriff mehr erlangen. Der Live-Betrieb erfolgt ausschließlich autorisiert und verschlüsselt über die neue .env-Schnittstelle. 
 
+18. Update (Projektfortschritt):
 
+    ​Ticketbearbeitung: 10 weitere Pflicht-Tickets (inklusive Korrektur des fehlerhaften Triggers in der Aufgabenstellung durch Nutzung von T32) vollständig abgearbeitet.
+    ​Workflow-Erweiterung: Benutzerdefinierten Ticket-Status in Bearbeitung in Zammad implementiert.
+    ​Prozesssteuerung: Ticket-Lifecycle für eine saubere Bearbeitungshistorie und Prozesskonformität integriert.
+    ​Qualitätssicherung: Testprotokoll-Tabelle mit den geforderten 25 Testfällen für das Testing angelegt.
+    KB 07 angepasst mit Sonderfall Kritsche Priorität
