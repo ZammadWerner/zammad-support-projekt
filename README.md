@@ -224,3 +224,9 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
     ​Prozesssteuerung: Ticket-Lifecycle für eine saubere Bearbeitungshistorie und Prozesskonformität integriert.
     ​Qualitätssicherung: Testprotokoll-Tabelle mit den geforderten 25 Testfällen für das Testing angelegt.
     KB 07 angepasst mit Sonderfall Kritsche Priorität
+
+19. ## 📌 Projektstatus & Meilensteine
+* **Bearbeitungsstand Tickets:** 22 von 40 Pflicht-Tickets erfolgreich bearbeitet.
+* **Geschlossene Tickets:** 15 produktive Fälle abgeschlossen (inkl. Nachweiserbringung via Dashboard-Ansicht).
+* **Warten auf Kunde:** 7 Tickets im Status "Warten auf Kunde" (mit flexiblen Fristen bis zum Prüfungsstart).
+* **Testumgebung:** Alte Testfälle und Basic-Auth-Tickets wurden bereinigt und in eine separate, unendliche Warteschleife ausgelagert, um die Haupt-Dashboards für die offizielle Dokumentation sauber zu halten.
