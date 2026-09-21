@@ -230,3 +230,22 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
 * **Geschlossene Tickets:** 15 produktive Fälle abgeschlossen (inkl. Nachweiserbringung via Dashboard-Ansicht).
 * **Warten auf Kunde:** 7 Tickets im Status "Warten auf Kunde" (mit flexiblen Fristen bis zum Prüfungsstart).
 * **Testumgebung:** Alte Testfälle und Basic-Auth-Tickets wurden bereinigt und in eine separate, unendliche Warteschleife ausgelagert, um die Haupt-Dashboards für die offizielle Dokumentation sauber zu halten.
+
+20.## Projektfortschritt & Meilensteine (Stand: 21.09.2026)
+
+Im Rahmen der heutigen Projektphase wurden folgende wesentliche Konfigurationen, Strukturen und Nachweise im Zammad-Ticketsystem erfolgreich finalisiert und dokumentiert:
+
+1. **Ticket-Bestand & Status-Abschluss (Tickets 20–30):**
+   - Vollständige Bearbeitung und Dokumentation des aktuellen Ticket-Bestands (Gesamtbestand: 30 Tickets).
+   - Detaillierter Nachweis der Status-Verteilung: 
+     - **16 geschlossene Tickets** (inkl. fachlicher Lösung und Rückmeldung)
+     - **5 wartende Tickets** (*Warten auf Kunde* / *Warten auf Dritte*)
+     - **8 eskalierte Tickets** (mit nachgewiesener Eskalations- und Admin-Ansicht)
+
+2. **Kategorisierung & Klassifizierung:**
+   - Erweiterung der Ticket-Kategorien und Anpassung hinsichtlich der Häufigkeit im täglichen Support-Betrieb, um eine präzisere Zuordnung und Auswertung zu ermöglichen.
+
+3. **Rollenbasierte Zugriffskontrolle der Ticket-Übersichten (RBAC):**
+   - Granulare Konfiguration und Strukturierung der Ticket-Übersichten (*Overviews*) im Zammad-Backend.
+   - **Erweiterter Zugriff (First-Level, Second-Level, Admins, IT-Leitung, Geschäftsführung):** Voller Einblick in kritische Ansichten (wie Eskalationen und offene Vorgänge) zur proaktiven Steuerung, Überwachung von Engpässen und effizienten Kundenkommunikation.
+   - **Spezifische / eingeschränkte Rollen (Vertrieb, Knowledge Base Editoren):** Gezielter Ausschluss von administrativen und eskalierten Support-Übersichten, um Fachabteilungen konsequent auf ihre operativen Kernaufgaben (z. B. reine Wissenspflege) zu fokussieren und Datenschutz sowie Informationssicherheit zu wahren. 
