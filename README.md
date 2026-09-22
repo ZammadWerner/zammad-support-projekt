@@ -231,7 +231,7 @@ Komplette Knowledge Base (KB) im Zammad-System erstellt. Insgesamt wurden 15 str
 * **Warten auf Kunde:** 7 Tickets im Status "Warten auf Kunde" (mit flexiblen Fristen bis zum Prüfungsstart).
 * **Testumgebung:** Alte Testfälle und Basic-Auth-Tickets wurden bereinigt und in eine separate, unendliche Warteschleife ausgelagert, um die Haupt-Dashboards für die offizielle Dokumentation sauber zu halten.
 
-20.## Projektfortschritt & Meilensteine (Stand: 21.09.2026)
+20. ## Projektfortschritt & Meilensteine (Stand: 21.09.2026)
 
 Im Rahmen der heutigen Projektphase wurden folgende wesentliche Konfigurationen, Strukturen und Nachweise im Zammad-Ticketsystem erfolgreich finalisiert und dokumentiert:
 
@@ -249,3 +249,11 @@ Im Rahmen der heutigen Projektphase wurden folgende wesentliche Konfigurationen,
    - Granulare Konfiguration und Strukturierung der Ticket-Übersichten (*Overviews*) im Zammad-Backend.
    - **Erweiterter Zugriff (First-Level, Second-Level, Admins, IT-Leitung, Geschäftsführung):** Voller Einblick in kritische Ansichten (wie Eskalationen und offene Vorgänge) zur proaktiven Steuerung, Überwachung von Engpässen und effizienten Kundenkommunikation.
    - **Spezifische / eingeschränkte Rollen (Vertrieb, Knowledge Base Editoren):** Gezielter Ausschluss von administrativen und eskalierten Support-Übersichten, um Fachabteilungen konsequent auf ihre operativen Kernaufgaben (z. B. reine Wissenspflege) zu fokussieren und Datenschutz sowie Informationssicherheit zu wahren. 
+
+21. 22.09.2026 Fortschritt und Dokumentation
+
+    ​Ticket-Bearbeitung: 5 weitere Tickets erfolgreich bearbeitet, womit der aktuelle Stand bei 35 von 40 Tickets liegt.
+    ​Knowledge Base (KB): Die KB-Artikel von KB16 bis KB23 vollständig erstellt, inhaltlich ausgearbeitet und erweitert (inklusive des standardisierten Ticket-Erstellungsprozesses bei KB23).
+    ​Prozess-Integration: Die neu erstellten KB-Artikel bei den relevanten Tickets sinnvoll zugeordnet und verknüpft, um die Nachvollziehbarkeit und den Support-Workflow lückenlos zu sichern.
+
+
